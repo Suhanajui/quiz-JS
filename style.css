@@ -1,0 +1,167 @@
+body{
+    padding: 0;
+    margin: 0;    
+    width:100vw;
+    height: 100vh; 
+    background-image: url("background.png");   
+}
+
+.wavy{
+    position: relative;   
+    top: 150px;
+    margin-left: 700px;
+    -webkit-box-reflect: below -12px linear-gradient(
+        transparent,rgba(0,0,0,0.4));
+    font-size: 1.5em;
+    font-weight: 900;
+
+}
+.wavy span {
+    position: relative;
+    display: inline-block;
+
+    color: rgb(252, 119, 10);
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: animate 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(0px);
+    }
+    20%
+    {
+        transform: translateY(-20px);
+    }
+    40%,100%
+    {
+        transform: translateY(0px);
+    }
+}
+
+.panel{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.question-container{
+    margin: 10px;
+    padding: 5px;
+    width: 80vw;
+    height: 10vh;
+    background-color: lightcoral;
+    font-size: x-large;
+    text-align: center;
+    box-shadow: 5px 10px;
+    border-radius: 25px;
+
+    animation-name: fontchange;
+    animation-duration: 5s;
+      
+}
+
+
+@keyframes fontchange {
+    from {font-size: xx-large;}
+    to {font-size: x-large;}
+  }
+
+
+
+
+.result{
+    margin: 10px;
+    padding: 5px;
+    width:80vw;
+    height: 10vh;
+    text-align: center;
+    font-size: 50px;
+      
+}
+.option-container{
+    display: flex;
+    justify-content: space-around; 
+    margin: 10px;
+    padding: 5px;
+    width: 80vw;
+    height: 20vh;
+    background-color: #9eb1b3;   
+    box-shadow: 5px 10px;
+    border-radius: 25px;
+        
+}
+
+
+
+
+
+
+.option{    
+    padding: 10px;
+    width: 15vw;
+    height: 10vh;
+    font-size: larger;
+    background-color: lightskyblue;
+    border-radius: 25%;
+    box-shadow: 5px 10px;
+    border-radius: 25px;
+    animation-name: colorchanging;
+    animation-duration: 10s;
+}
+
+
+@keyframes colorchanging {
+    from {background-color: lightskyblue;}
+    to {background-color: red;}
+  }
+
+
+.option:hover{
+    background-color: springgreen;
+}
+.navigation{
+    width: 80vw;
+    height: 10vh;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    background-color:#c7dddf;
+    box-shadow: 5px 10px;
+    border-radius: 25px;
+}
+  
+.evaluate,.next{
+    width:30vw;
+    height: 8vh;
+    padding: 5px;
+    font-size: larger;
+}
+.evaluate{
+    
+    background-color: #50DBB4;
+    box-shadow: 5px 10px;
+    border-radius: 25px;
+}
+.next{
+    color: white;
+    background-color: #BF3325;
+    box-shadow: 5px 10px;
+    border-radius: 25px;
+}
+
+.next:hover{
+    background-color: springgreen;
+}
+
+.evaluate:hover{
+    background-color: springgreen;
+}
+
+
+
